@@ -1,5 +1,3 @@
-"use client";
-
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -33,8 +31,8 @@ const Navbar = () => {
         </div>
 
         <div className="right-links">
-          <button>Login</button>
-          <button>Signup</button>
+          <Link href="/login">Login</Link>
+          <Link href="/signup">Signup</Link>
         </div>
       </div>
 
@@ -56,16 +54,14 @@ const Navbar = () => {
           display: flex;
           gap: 15px;
         }
-        .left-links a, .right-links button {
+        .left-links a, .right-links a {
           color: white;
           text-decoration: none;
           font-size: 1rem;
           background: none;
-          border: none;
-          cursor: pointer;
           padding: 5px 10px;
         }
-        .left-links a:hover, .right-links button:hover {
+        .left-links a:hover, .right-links a:hover {
           text-decoration: underline;
         }
         .search-bar {
